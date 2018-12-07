@@ -8,9 +8,9 @@ In android programming, a CheckedTextView may be refered as an extension of a no
 CheckedTextView was introduced in API 1, version_code "BASE". The package library is in java.lang.Object which includes android.view.View, android.widget.TextView and android.widget.CheckedTextView.
 
 # major methods/attributes:
-public class CheckedTextView extends TextView implements Checkable
+public class CheckedTextView extends TextView implements Checkable <br/>
 android:checkMark - to provide a drawble or graphic checkMark.
-android:checkMarkTint -
+android:checkMarkTint - This is the tint when applying to check mark.
 android:checkMarkTintMode -
 android:checked -
 
