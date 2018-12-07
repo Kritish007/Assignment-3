@@ -9,8 +9,8 @@ CheckedTextView was introduced in API 1, version_code "BASE". The package librar
 
 # major methods/attributes:
 public class CheckedTextView extends TextView implements Checkable <br/>
-android:checkMark - to provide a drawble or graphic checkMark.
-android:checkMarkTint - This is the tint when applying to check mark.
+android:checkMark - to provide a drawble or graphic checkMark. <br/>
+android:checkMarkTint - This is the tint when applying to check mark. <br/>
 android:checkMarkTintMode -
 android:checked -
 
