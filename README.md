@@ -9,10 +9,12 @@ CheckedTextView was introduced in API 1, version_code "BASE". The package librar
 
 # major methods/attributes:
 public class CheckedTextView extends TextView implements Checkable <br/>
+The following is in the XML atributes: <br/>
 android:checkMark - to provide a drawble or graphic checkMark. <br/>
 android:checkMarkTint - This is the tint when applying to check mark. <br/>
-android:checkMarkTintMode -
-android:checked -
+android:checkMarkTintMode - This is used to apply a check mark tint in blending mode <br/>
+android:checked - This is an 'either or' which indicates the checked state. It can be a boolean value such as true or false. <br/>
+The 4 attributes are inherited from the class android.widget.TextView and android.view.View
 
 # Example Project:
  
@@ -21,3 +23,4 @@ android:checked -
 # Reference:
 
 https://developer.android.com/reference/android/widget/CheckedTextView
+https://abhiandroid.com/ui/checkedtextview
