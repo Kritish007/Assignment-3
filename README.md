@@ -22,5 +22,5 @@ The 4 attributes are inherited from the class android.widget.TextView and androi
 
 # Reference:
 
-https://developer.android.com/reference/android/widget/CheckedTextView
-https://abhiandroid.com/ui/checkedtextview
+https://developer.android.com/reference/android/widget/CheckedTextView <br/>
+https://abhiandroid.com/ui/checkedtextview <br/>
