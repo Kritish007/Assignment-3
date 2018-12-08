@@ -1,4 +1,5 @@
-# Title: CheckedTextView
+# Title:
+CheckedTextView
 # Introduction:
 In android programming, a CheckedTextView may be refered as an extension of a normal TextView which supports the 'checkable' interface and displays. CheckedTextView can be implemented in any API level which means it will work on most devices. It can be used in many cases such as in a ListView where a choice is checked/selected, the following (back-end)function changes to setChoiceMade from CHOICE_MODE_NONE. If there is a situation where a user gets to select only one choice, the function CHOICE_MODE_SINGLE is set. Otherwise if more than one choice/unlimited checked, then the function CHOICE_MODE_MULTIPLE is set. In my example project below, I opted for CHOICE_MODE_MULTIPLE which means the user may select as much option he/she wants. The major purpose of CheckedTextView is to facilitate options, may it be settings or selections of any sort. The result may involve additional feature or lesser feature depending on the choice.
 
