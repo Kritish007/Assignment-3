@@ -1,17 +1,38 @@
-# Title:
-CheckedTextView
-
+# Title: CheckedTextView
 # Introduction:
-In android programming, a CheckedTextView may be refered as an extension of a normal TextView which supports the 'checkable' interface and displays. It can be used in many cases such as in a ListView where a choice is checked/selected, the following function changes to setChoiceMade from CHOICE_MODE_NONE. If there is a situation where a user gets to select only one choice, the function CHOICE_MODE_SINGLE is set. Otherwise if more than one choice/unlimited checked, then the function CHOICE_MODE_MULTIPLE is set.
+In android programming, a CheckedTextView may be refered as an extension of a normal TextView which supports the 'checkable' interface and displays. It can be used in many cases such as in a ListView where a choice is checked/selected, the following function changes to setChoiceMade from CHOICE_MODE_NONE. If there is a situation where a user gets to select only one choice, the function CHOICE_MODE_SINGLE is set. Otherwise if more than one choice/unlimited checked, then the function CHOICE_MODE_MULTIPLE is set. In my example project below, I opted for CHOICE_MODE_MULTIPLE which means the user may select as much option he/she wants. The major purpose of CheckedTextView is to facilitate options, may it be settings or selections of any sort.  
 
 # History:
 CheckedTextView was introduced in API 1, version_code "BASE". The package library is in android.widget <br/>
-There are many more functions associated with CheckedTextview, we are going to go through the one I used in my example project below <br/>
+There are many more specific functions associated with CheckedTextview. However, we are going to go through the one I used in my example project below <br/>
 
 # Major methods/attributes:
-public class CheckedTextView extends TextView implements Checkable <br/>
+public class CheckedTextView extends BaseAdapter - To implement an adapter for listView in CustomAdapter.java <br/>
+public void onClick(View v) - Used as a listener in CustomAdapter.java <br/>
+public View getView(int position, View view, ViewGroup parent) - Also used in CustomAdapter.java to get the view. <br/>
+CustomAdapter customAdapter = new CustomAdapter(getApplicationContext(), settingsList); - Used to parse settingsList/String to CustomAdapter.java <br/>
+listView.setAdapter(customAdapter); - To set the adapter according to listView. <br/>
+The following is to create the listener: <br/>
+```
+CheckedTextViewAll.setOnClickListener(new View.OnClickListener(){
+@Override
+   public void onClick(View v) {
+                if (CheckedTextViewAll.isChecked()) { // to determine if already checked
+                    CheckedTextViewAll.setCheckMarkDrawable(0); // if checked, set drawable to 0/do nothing
+                    CheckedTextViewAll.setChecked(false); // set checked to false/do nothing
+                } else { //else if selection is not checked then display check
+                    CheckedTextViewAll.setCheckMarkDrawable(R.drawable.checkmark); // display checked image
+                    CheckedTextViewAll.setChecked(true); // set to checked
+                }
+            }
+        }); // End of listener
+        return view;
+```
+CheckedTextViewAll.setCheckMarkDrawable(R.drawable.checkmark); -Brings up the checkmark image to the screen <br/>
+
 The following is in the XML atributes: <br/>
 android:checkMark - to provide a drawble or graphic checkMark. <br/>
+The remaining 3 are an option of using them for specific views in activity_main.xml <br/>
 android:checkMarkTint - This is the tint when applying to check mark. <br/>
 android:checkMarkTintMode - This is used to apply a check mark tint in blending mode <br/>
 android:checked - This is an 'either or' which indicates the checked state. It can be a boolean value such as true or false. <br/>
