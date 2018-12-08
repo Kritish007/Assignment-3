@@ -8,11 +8,11 @@ CheckedTextView is as important as other widget. The only difference is that it 
 There are many more specific functions associated with CheckedTextview. However, we are going to go through the one I used in my example project below. <br/>
 
 # Major methods/attributes:
-public class CheckedTextView extends BaseAdapter - To implement an adapter for listView in CustomAdapter.java <br/>
-public void onClick(View v) - Used as a listener in CustomAdapter.java <br/>
-public View getView(int position, View view, ViewGroup parent) - Also used in CustomAdapter.java to get the view. <br/>
-CustomAdapter customAdapter = new CustomAdapter(getApplicationContext(), settingsList); - Used to parse settingsList/String to CustomAdapter.java <br/>
-listView.setAdapter(customAdapter); - To set the adapter according to listView. <br/>
+•public class CheckedTextView extends BaseAdapter - To implement an adapter for listView in CustomAdapter.java <br/>
+•public void onClick(View v) - Used as a listener in CustomAdapter.java <br/>
+•public View getView(int position, View view, ViewGroup parent) - Also used in CustomAdapter.java to get the view. <br/>
+•CustomAdapter customAdapter = new CustomAdapter(getApplicationContext(), settingsList); - Used to parse settingsList/String to •CustomAdapter.java <br/>
+•listView.setAdapter(customAdapter); - To set the adapter according to listView. <br/>
 The following is to create the listener: <br/>
 ```
 CheckedTextViewAll.setOnClickListener(new View.OnClickListener(){
@@ -29,14 +29,14 @@ CheckedTextViewAll.setOnClickListener(new View.OnClickListener(){
         }); // End of listener
         return view;
 ```
-CheckedTextViewAll.setCheckMarkDrawable(R.drawable.checkmark); -Brings up the checkmark image to the screen <br/>
+•CheckedTextViewAll.setCheckMarkDrawable(R.drawable.checkmark); -Brings up the checkmark image to the screen <br/>
 
 The following is in the XML atributes: <br/>
-android:checkMark - to provide a drawble or graphic checkMark. <br/>
+•android:checkMark - to provide a drawble or graphic checkMark. <br/>
 The remaining 3 are an option of using them for specific views in activity_main.xml <br/>
-android:checkMarkTint - This is the tint when applying to check mark. <br/>
-android:checkMarkTintMode - This is used to apply a check mark tint in blending mode <br/>
-android:checked - This is an 'either or' which indicates the checked state. It can be a boolean value such as true or false. <br/>
+•android:checkMarkTint - This is the tint when applying to check mark. <br/>
+•android:checkMarkTintMode - This is used to apply a check mark tint in blending mode <br/>
+•android:checked - This is an 'either or' which indicates the checked state. It can be a boolean value such as true or false. <br/>
 The 4 attributes are inherited from the class android.widget.TextView and android.view.View <br/>
 
 CheckedTextViewAll.setCheckMarkDrawable(0); - Used to set the drawable to the image. if 0 means none.
