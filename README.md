@@ -11,7 +11,7 @@ There are many more specific functions associated with CheckedTextview. However,
 •public class CheckedTextView extends BaseAdapter - To implement an adapter for listView in CustomAdapter.java <br/>
 •public void onClick(View v) - Used as a listener in CustomAdapter.java <br/>
 •public View getView(int position, View view, ViewGroup parent) - Also used in CustomAdapter.java to get the view. <br/>
-•CustomAdapter customAdapter = new CustomAdapter(getApplicationContext(), settingsList); - Used to parse settingsList/String to •CustomAdapter.java <br/>
+•CustomAdapter customAdapter = new CustomAdapter(getApplicationContext(), settingsList); - Used to parse settingsList/String to CustomAdapter.java <br/>
 •listView.setAdapter(customAdapter); - To set the adapter according to listView. <br/>
 The following is to create the listener: <br/>
 ```
