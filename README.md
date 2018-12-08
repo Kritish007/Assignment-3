@@ -1,10 +1,11 @@
 # Title: CheckedTextView
 # Introduction:
-In android programming, a CheckedTextView may be refered as an extension of a normal TextView which supports the 'checkable' interface and displays. It can be used in many cases such as in a ListView where a choice is checked/selected, the following function changes to setChoiceMade from CHOICE_MODE_NONE. If there is a situation where a user gets to select only one choice, the function CHOICE_MODE_SINGLE is set. Otherwise if more than one choice/unlimited checked, then the function CHOICE_MODE_MULTIPLE is set. In my example project below, I opted for CHOICE_MODE_MULTIPLE which means the user may select as much option he/she wants. The major purpose of CheckedTextView is to facilitate options, may it be settings or selections of any sort.  
+In android programming, a CheckedTextView may be refered as an extension of a normal TextView which supports the 'checkable' interface and displays. CheckedTextView can be implemented in any API level which means it will work on most devices. It can be used in many cases such as in a ListView where a choice is checked/selected, the following function changes to setChoiceMade from CHOICE_MODE_NONE. If there is a situation where a user gets to select only one choice, the function CHOICE_MODE_SINGLE is set. Otherwise if more than one choice/unlimited checked, then the function CHOICE_MODE_MULTIPLE is set. In my example project below, I opted for CHOICE_MODE_MULTIPLE which means the user may select as much option he/she wants. The major purpose of CheckedTextView is to facilitate options, may it be settings or selections of any sort. The result may involve additional feature or lesser feature depending on the choice.
 
 # History:
 CheckedTextView was introduced in API 1, version_code "BASE". The package library is in android.widget <br/>
-There are many more specific functions associated with CheckedTextview. However, we are going to go through the one I used in my example project below <br/>
+CheckedTextView is as important as other widget. The only difference is that it can be implemented in a listView where there is a list of settings/names where the user may selects the one he wishes. It is unlike a checkbox.
+There are many more specific functions associated with CheckedTextview. However, we are going to go through the one I used in my example project below. <br/>
 
 # Major methods/attributes:
 public class CheckedTextView extends BaseAdapter - To implement an adapter for listView in CustomAdapter.java <br/>
@@ -38,6 +39,9 @@ android:checkMarkTintMode - This is used to apply a check mark tint in blending 
 android:checked - This is an 'either or' which indicates the checked state. It can be a boolean value such as true or false. <br/>
 The 4 attributes are inherited from the class android.widget.TextView and android.view.View <br/>
 
+CheckedTextViewAll.setCheckMarkDrawable(0); - Used to set the drawable to the image. if 0 means none.
+CheckedTextViewAll.setChecked(false); - Used to check to false/none or default value.
+CheckedTextViewAll.setCheckMarkDrawable(R.drawable.checkmark); - Brings the checkmark image to the screen
 
 
 # Example Project:
@@ -54,8 +58,11 @@ A summary on how to create a CheckedTextView: <br/>
 8. Get the view from list_view_items, CheckedTextView and set the text to it's position. <br/>
 9. Finally, we create a listener when user interacts with the selection he/she makes. <br/>
 
+I have set up a CheckedTextView in a listView aiming to create a setting page where a user gets to change/selects a setting he wants to enable. The example below is related with my android project: color detector which I might use in the future as a setting screen. <br/>
+
 # Code:
 This is a link to the complete project on Git-hub: https://github.com/Kritish007/assignment3 <br/>
+
 ### ```MainActivity.java```
 
 ```
