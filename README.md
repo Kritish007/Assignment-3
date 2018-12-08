@@ -5,21 +5,36 @@ CheckedTextView
 In android programming, a CheckedTextView may be refered as an extension of a normal TextView which supports the 'checkable' interface and displays. It can be used in many cases such as in a ListView where a choice is checked/selected, the following function changes to setChoiceMade from CHOICE_MODE_NONE. If there is a situation where a user gets to select only one choice, the function CHOICE_MODE_SINGLE is set. Otherwise if more than one choice/unlimited checked, then the function CHOICE_MODE_MULTIPLE is set.
 
 # History:
-CheckedTextView was introduced in API 1, version_code "BASE". The package library is in java.lang.Object which includes android.view.View, android.widget.TextView and android.widget.CheckedTextView.
+CheckedTextView was introduced in API 1, version_code "BASE". The package library is in android.widget <br/>
+There are many more functions associated with CheckedTextview, we are going to go through the one I used in my example project below <br/>
 
-# major methods/attributes:
+# Major methods/attributes:
 public class CheckedTextView extends TextView implements Checkable <br/>
 The following is in the XML atributes: <br/>
 android:checkMark - to provide a drawble or graphic checkMark. <br/>
 android:checkMarkTint - This is the tint when applying to check mark. <br/>
 android:checkMarkTintMode - This is used to apply a check mark tint in blending mode <br/>
 android:checked - This is an 'either or' which indicates the checked state. It can be a boolean value such as true or false. <br/>
-The 4 attributes are inherited from the class android.widget.TextView and android.view.View
+The 4 attributes are inherited from the class android.widget.TextView and android.view.View <br/>
+
+
 
 # Example Project:
 The check mark used: ![checkmark](https://user-images.githubusercontent.com/42982622/49680495-e1fd1a00-fa62-11e8-8bf6-ca75cfb8a137.png) <br/>
 ![checkedtextview example](https://user-images.githubusercontent.com/42982622/49680338-5c2c9f00-fa61-11e8-81a3-cf94315e3cf2.PNG) <br/>
+A summary on how to create a CheckedTextView: <br/>
+1. Create a listView in activity_main.xml <br/>
+2. Create a CheckedTextView in another newly created list_view_items.xml <br/>
+3. Create a custom adapter "public class CustomAdapter extends BaseAdapter" in CustomAdapter.java <br/>
+4. Create a variable array to hold the strings in MainActivity.java <br/>
+5. Declare & findViewById of listview in MainActivity.java <br/>
+6. Parse the strings to CustomAdapter and set the adapter according to the listView in MainActivity.java <br/>
+7. Create an array variable to hold the parsed Strings in CustomAdapter.java <br/>
+8. Get the view from list_view_items, CheckedTextView and set the text to it's position. <br/>
+9. Finally, we create a listener when user interacts with the selection he/she makes. <br/>
+
 # Code:
+This is a link to the complete project on Git-hub: https://github.com/Kritish007/assignment3 <br/>
 ### ```MainActivity.java```
 
 ```
